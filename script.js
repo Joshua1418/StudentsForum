@@ -32,7 +32,7 @@ document.onreadystatechange = function(){
 }
 
 async function readMessage(){ 
-    const res = await fetch("http://localhost:4000/messages")
+    const res = await fetch("http://localhost:10000/messages")
     const data = await res.json();
     document.getElementById("discussion").innerHTML = ""
     data.forEach(content => {
@@ -51,7 +51,7 @@ async function addMessage(){
     if (message == "" ){
        return
     }
-    await fetch("http://localhost:4000/add",{
+    await fetch("http://localhost:10000/add",{
          method: "POST",
          body: JSON.stringify({ 
             nom :  localStorage.getItem("user"),
@@ -64,7 +64,7 @@ async function addMessage(){
 }
 
 async function messageDelete(id){
-    await fetch("http://localhost:4000/delete",{
+    await fetch("http://localhost:10000/delete",{
         method: "POST",
         body: JSON.stringify({
             id:id
