@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentsForum</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="talk.png" type="image/x-icon" />
+    <script src="script.js"></script>
+  </head>
+  <body class="body-discussion">
+    <main>
+      <header class="header-container">
+        <h2>Student<span>sF</span>orum</h2>
+        <img src="menu.png" alt="menu-bars" onclick="openNav()" />
+      </header>
+      <nav class="nav-box" id="navBox">
+        <a href="rules.html">Règles du Forum</a>
+        <a onclick="logout()">Déconnexion</a>
+        <a href="about.html"
+          >A propos de Student<span style="color: rgb(118, 118, 30)">sF</span
+          >orum</a
+        >
+      </nav>
+      <section class="discussion-container" id="discussion">
+        <!-- Data is coming from database -->
+        </div>
+      </section>
+      <div class="message-container">
+        <input
+          type="text"
+          name="message"
+          id="message"
+          placeholder="Ecrivez la question ou la réponse..."
+        />
+        <img
+          id="send-box"
+          class="send-box"
+          src="send.png"
+          alt="send"
+          onclick="addMessage()"
+        />
+      </div>
+    </main>
+    <script>
+      verifyUser();
+      function verifyUser() {
+        if (!localStorage.getItem("user")) {
+          location.href = "index.html";
+        }
+      }
+    </script>
+  </body>
+</html>

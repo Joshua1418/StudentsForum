@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudentsForum</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="talk.png" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <section class="home-container">
+        <img src="talk.png" alt="" />
+        <div class="message-box">
+          <h2>Student<span>sF</span>orum</h2>
+          <p>
+            Posez et répondez aux questions scientifiques sur l'informatique.
+          </p>
+        </div>
+        <button onclick="followingPage()" class="btn-following">
+          Continuer
+        </button>
+      </section>
+    </main>
+    <script>
+      verifyUser();
+      function verifyUser() {
+        if (localStorage.getItem("user")) {
+          location.href = "discussion.html";
+        }
+      }
+      function followingPage() {
+        location.href = "connexion.html";
+      }
+    </script>
+  </body>
+</html>

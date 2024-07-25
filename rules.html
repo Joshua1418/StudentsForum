@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentsForum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="talk.png" type="image/x-icon">
+    <script src="script.js"></script>
+</head>
+<body class="body-discussion">
+    <main>
+        <header class="header-container">
+            <h2>Student<span>sF</span>orum</h2>
+            <img src="menu.png" alt="menu-bars" onclick="openNav()">
+        </header>
+        <nav class="nav-box" id="navBox">
+            <a href="rules.html">Règles du Forum</a>
+            <a onclick="logout()">Déconnexion</a>
+            <a href="about.html">A propos de Student<span style="color: rgb(118, 118, 30);">sF</span>orum</a>
+        </nav>
+        <section class="home-container">
+            <img src="trust.png" alt="">
+            <div class="message-box">
+                <h2>Règles du Forum</h2>
+               <ol style="text-align: start; text-wrap: nowrap; font-family: Tahoma, Geneva, Verdana, sans-serif;">
+                <li>Le respect des règles</li>
+                <li>Le respect des autres</li>
+                <li>La courtoisie</li>
+                <li>La clarté des questions</li>
+                <li>Les bonnes réponses</li>
+                <li>Restez dans le contexte</li>
+               </ol>
+            </div>
+            <button onclick="discussionInterface()" class="btn-following">Discussion</button>
+        </section>
+    </main>
+
+    <script>
+        function discussionInterface() {
+            location.href = "discussion.html"
+        }
+    </script>
+</body>
+</html>
